@@ -22,24 +22,25 @@ const getPostSuccess = function (responseGetPost) {
   // loop through array
   // select html element and use jquery to add blog title to element
   // create an empty string variable
-  let authorHtml = ''
+  let blogHtml = ''
 
   // Loop over the authors and add html to the string variable
-  responseData.authors.forEach(author => {
+  responseGetPost.blogs.forEach(blog => {
     // Create author HTML
-    const oneAuthor = (`
-      <h4>First Name: ${author.first_name}</h4>
-      <p>Last Name: ${author.last_name}</p>
-      <p>ID: ${author._id}</p>
+    const allBlogs = (`
+      <h4>Title: ${blog.title}</h4>
+      <p>Date: ${blog.date}</p>
+      <p>Post: ${blog.post}</p>
+      <p>ID: ${blog._id}</p>
       <br>
     `)
 
     // Concatenate it with `authorHtml`
-    authorHtml += oneAuthor
+    blogHtml += allBlogs
   })
 
   // Place all the authors on the page:
-  $('#content').html(authorHtml)
+  $('#content').html(blogHtml)
 }
 
 const getPostFailure = function (responseCreatePost) {
