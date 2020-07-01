@@ -26,7 +26,6 @@ const signInSuccess = function (responseSignIn) {
   $('form').trigger('reset')
   $('#sign-out').show()
   $('#change-password').show()
-  $('#new-game').show()
   $('#message2').css('color', 'green')
   store.user = responseSignIn.user
   console.log(responseSignIn)
@@ -69,8 +68,6 @@ const signOutSuccess = function (responseSignOut) {
   $('#message').hide('Sign Up Successful')
   $('#message2').hide('Sign In Successful')
   $('#message4').show('You Are Signed out!')
-  $('#message5').hide('New Game Started!')
-  $('#message6').hide('Showing previous games')
   console.log('Sign Out Successful!')
   store.user = null
 }
@@ -82,6 +79,21 @@ const signOutFailure = function (responseSignOut) {
   $('#message4').css('color', 'red')
   console.error('signOut Error is :', responseSignOut)
 }
+
+const createPostSuccess = function (responseCreatePost) {
+  // reset when sign in sucessful
+  $('#message5').text('Post Successfully Created')
+  $('form').trigger('reset')
+  $('#message5').css('color', 'green')
+  console.log('created')
+}
+
+const createPostFailure = function (responseCreatePost) {
+  $('#message5').text('Sign Up Failed')
+  $('form').trigger('reset')
+  $('#message5').css('color', 'red')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -90,5 +102,7 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  createPostSuccess,
+  createPostFailure
 }

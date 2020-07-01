@@ -45,5 +45,36 @@
       <button type="submit">Change Password</button>
     </form>
 
+      <form id="create-post">
+      <h2>Create Post!</h2>
+      <p id="message5"></p>
+      <input type="text" name="blog[title]" placeholder="Title" required>
+      <input type="text" name="blog[date]" placeholder="Date" required>
+      <input class="blog-post-box" type="text" name="blog[post]" placeholder="Post Here" required>
+      <button type="submit">Create Post</button>
+    </form>
+
+    <form id="update-post">
+    <h2>Update Post!</h2>
+    <p id="message7"></p>
+    <input type="text" name="blog[id]" placeholder="Blog ID Number" required>
+    <input type="text" name="blog[title]" placeholder="Title" required>
+    <input type="text" name="blog[date]" placeholder="Date" required>
+    <input class="blog-post-box" type="text" name="blog[post]" placeholder="Post Here" required>
+    <button type="submit">Update Post</button>
+  </form>
+
+    <form id="delete-post">
+    <h2>Delete Post!</h2>
+    <p id="message8"></p>
+    <input type="text" name="blog[id]" placeholder="Blog ID Number" required>
+    <button type="submit">Delete Post</button>
+    </form>
+
+    <form id="get-posts">
+    <p id="message6"></p>
+      <button type="submit">View All Posts</button>
+    </form>
+
     </body>
 </html>
