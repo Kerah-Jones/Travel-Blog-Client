@@ -45,12 +45,20 @@
       <button type="submit">Change Password</button>
     </form>
 
+    <div>
+      <form id="get-posts">
+      <p id="message6"></p>
+        <button type="submit">View All Posts</button>
+      </form>
+      <section class="content"></section>
+    </div>
+
       <form id="create-post">
       <h2>Create Post!</h2>
       <p id="message5"></p>
-      <input type="text" name="blog[title]" placeholder="Title" required>
-      <input type="text" name="blog[date]" placeholder="Date" required>
-      <input class="blog-post-box" type="text" name="blog[post]" placeholder="Post Here" required>
+      <input type="text" name="blog[title]" placeholder="Title" required><br>
+      <input type="text" name="blog[date]" placeholder="Date" required><br>
+      <textarea class="blog-post-box" name="blog[post]" placeholder="Post Here" required></textarea><br>
       <button type="submit">Create Post</button>
     </form>
 
@@ -61,10 +69,10 @@
     <form id="update-post">
     <h2>Update Post!</h2>
     <p id="message7"></p>
-    <input type="text" name="blog[id]" placeholder="Blog ID Number" required>
-    <input type="text" name="blog[title]" placeholder="Title" required>
-    <input type="text" name="blog[date]" placeholder="Date" required>
-    <input class="blog-post-box" type="text" name="blog[post]" placeholder="Post Here" required>
+    <input type="text" name="blog[id]" placeholder="Blog ID Number" required><br>
+    <input type="text" name="blog[title]" placeholder="Title" required><br>
+    <input type="text" name="blog[date]" placeholder="Date" required><br>
+    <textarea class="blog-post-box" name="blog[post]" placeholder="Post Here" required></textarea><br>
     <button type="submit">Update Post</button>
   </form>
 
@@ -75,11 +83,5 @@
     <button type="submit">Delete Post</button>
     </form>
 
-    <form id="get-posts">
-    <p id="message6"></p>
-      <button type="submit">View All Posts</button>
-    </form>
-<section class="content">
-</section>
     </body>
 </html>
