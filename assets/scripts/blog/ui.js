@@ -21,7 +21,7 @@ const getPostSuccess = function (responseGetPost) {
   $('#message5').css('color', 'green')
   console.log(responseGetPost.blogs)
   const showBlogsHtml = showBlogsTemplate({ blogs: responseGetPost.blogs })
-  $('.content').append(showBlogsHtml)
+  $('.content').html(showBlogsHtml)
 }
 // loop through array
 // select html element and use jquery to add blog title to element
