@@ -44,13 +44,10 @@ const onDeletePost = function (event) {
   event.preventDefault()
   console.log('delete post ran')
 
-  const blogId = $(event.target).closest('section').data('id')
   const form = event.target
   const data = getFormFields(form)
   api.deletePostIndex(data)
-  api.deleteBook(blogId)
-  // connect events funtions to ui messages for change password
-    .then(() => onGetPost(event))
+
     .then(ui.deletePostSuccess)
     .catch(ui.deletePostFailure)
 }

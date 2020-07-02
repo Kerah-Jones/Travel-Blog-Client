@@ -28,6 +28,7 @@ const signInSuccess = function (responseSignIn) {
   $('#change-password').show()
   $('#message2').css('color', 'green')
   $('#access-blog').show()
+  $('.content').show()
   store.user = responseSignIn.user
   console.log(responseSignIn)
 }
@@ -69,6 +70,12 @@ const signOutSuccess = function (responseSignOut) {
   $('#message').hide('Sign Up Successful')
   $('#message2').hide('Sign In Successful')
   $('#message4').show('You Are Signed out!')
+  $('#create-post').hide()
+  $('#update-post').hide()
+  $('#delete-post').hide()
+  $('#get-posts').hide()
+  $('#access-blog').hide()
+  $('.content').hide()
   console.log('Sign Out Successful!')
   store.user = null
 }
