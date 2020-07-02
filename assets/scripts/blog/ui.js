@@ -78,7 +78,12 @@ const deletePostFailure = function (responseCreatePost) {
   $('form').trigger('reset')
   $('#message5').css('color', 'red')
 }
-
+const accessBlogSuccess = function (responseAccessBlog) {
+  $('#create-post').show()
+  $('#update-post').show()
+  $('#delete-post').show()
+  $('#get-post').show()
+}
 
 module.exports = {
   createPostSuccess,
@@ -88,5 +93,6 @@ module.exports = {
   updatePostSuccess,
   updatePostFailure,
   deletePostSuccess,
-  deletePostFailure
+  deletePostFailure,
+  accessBlogSuccess
 }

@@ -16,4 +16,13 @@ $(() => {
   $('#get-posts').on('submit', blogEvents.onGetPost)
   $('#update-post').on('submit', blogEvents.onUpdatePost)
   $('#delete-post').on('submit', blogEvents.onDeletePost)
+  $('#access-blog').on('submit', blogEvents.onAccessBlog)
+  $('#sign-out').hide()
+  $('#create-post').hide()
+  $('#update-post').hide()
+  $('#delete-post').hide()
+  $('#get-posts').hide()
+  $('#change-password').hide()
+  $('#access-blog').hide()
+
 })

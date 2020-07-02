@@ -27,6 +27,7 @@ const signInSuccess = function (responseSignIn) {
   $('#sign-out').show()
   $('#change-password').show()
   $('#message2').css('color', 'green')
+  $('#access-blog').show()
   store.user = responseSignIn.user
   console.log(responseSignIn)
 }
@@ -80,20 +81,6 @@ const signOutFailure = function (responseSignOut) {
   console.error('signOut Error is :', responseSignOut)
 }
 
-const createPostSuccess = function (responseCreatePost) {
-  // reset when sign in sucessful
-  $('#message5').text('Post Successfully Created')
-  $('form').trigger('reset')
-  $('#message5').css('color', 'green')
-  console.log('created')
-}
-
-const createPostFailure = function (responseCreatePost) {
-  $('#message5').text('Sign Up Failed')
-  $('form').trigger('reset')
-  $('#message5').css('color', 'red')
-}
-
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -102,7 +89,5 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure,
-  createPostSuccess,
-  createPostFailure
+  signOutFailure
 }

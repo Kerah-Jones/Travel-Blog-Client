@@ -55,9 +55,22 @@ const onDeletePost = function (event) {
     .catch(ui.deletePostFailure)
 }
 
+// button to gain access to the blog
+const onAccessBlog = function (event) {
+  event.preventDefault()
+  $('#sign-in').hide()
+  $('#sign-up').hide()
+  $('#change-password').hide()
+  $('#create-post').show()
+  $('#update-post').show()
+  $('#delete-post').show()
+  $('#get-posts').show()
+}
+
 module.exports = {
   onCreatePost,
   onGetPost,
   onUpdatePost,
-  onDeletePost
+  onDeletePost,
+  onAccessBlog
 }
