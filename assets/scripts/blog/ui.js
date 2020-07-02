@@ -1,4 +1,5 @@
 const store = require('./../store')
+const showBlogsTemplate = require('../templates/blog-post.handlebars')
 
 const createPostSuccess = function (responseCreatePost) {
   // reset when sign in sucessful
@@ -19,29 +20,32 @@ const getPostSuccess = function (responseGetPost) {
   $('form').trigger('reset')
   $('#message5').css('color', 'green')
   console.log(responseGetPost.blogs)
-  // loop through array
-  // select html element and use jquery to add blog title to element
-  // create an empty string variable
-  let blogHtml = ''
-
-  // Loop over the authors and add html to the string variable
-  responseGetPost.blogs.forEach(blog => {
-    // Create author HTML
-    const allBlogs = (`
-      <h4>Title: ${blog.title}</h4>
-      <p>Date: ${blog.date}</p>
-      <p>Post: ${blog.post}</p>
-      <p>ID: ${blog._id}</p>
-      <br>
-    `)
-
-    // Concatenate it with `authorHtml`
-    blogHtml += allBlogs
-  })
-
-  // Place all the authors on the page:
-  $('#content').html(blogHtml)
+  const showBlogsHtml = showBlogsTemplate({ blogs: responseGetPost.blogs })
+  $('.content').append(showBlogsHtml)
 }
+// loop through array
+// select html element and use jquery to add blog title to element
+// create an empty string variable
+//   let blogHtml = ''
+//
+//   // Loop over the authors and add html to the string variable
+//   responseGetPost.blogs.forEach(blog => {
+//     // Create author HTML
+//     const allBlogs = (`
+//       <h4>Title: ${blog.title}</h4>
+//       <p>Date: ${blog.date}</p>
+//       <p>Post: ${blog.post}</p>
+//       <p>ID: ${blog._id}</p>
+//       <br>
+//     `)
+//
+//     // Concatenate it with `authorHtml`
+//     blogHtml += allBlogs
+//   })
+//
+//   // Place all the authors on the page:
+//   $('#content').html(blogHtml)
+// }
 
 const getPostFailure = function (responseCreatePost) {
   $('#message6').text('Failed to Get Post')
@@ -74,6 +78,7 @@ const deletePostFailure = function (responseCreatePost) {
   $('form').trigger('reset')
   $('#message5').css('color', 'red')
 }
+
 
 module.exports = {
   createPostSuccess,

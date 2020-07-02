@@ -1,0 +1,20 @@
+{{#each blogs as |blog|}}
+  {{log blog}}
+  <section data-id="{{blog.id}}">
+    <h6>Title:</h6>
+    <h2>
+      {{blog.title}}
+    </h2>
+    <h6>Post:</h6>
+    <p>
+      {{#if blog.post}}
+        {{blog.post}}
+      {{else}}
+        No content.
+      {{/if}}
+    </p>
+    <!-- <button type="submit" class="btn btn-danger delete-book">Remove</button> -->
+    <!-- {{> partial}} -->
+  </section>
+
+{{/each}}

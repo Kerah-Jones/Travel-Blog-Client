@@ -32,38 +32,43 @@ const getPostIndex = function (data) {
   })
 }
 
-// const updatePostIndex = function (data) {
-//   console.log(data)
-//   return $.ajax({
-//     method: 'PATCH',
-//     url: config.apiUrl + '/blogs',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     },
-//     data: {
-//       blog: {
-//         title: data.blog.title,
-//         date: data.blog.date,
-//         post: data.blog.post
-//       }
-//     }
-//   })
-// }
-//
-// const deletePostIndex = function (data) {
-//   console.log(data)
-//   return $.ajax({
-//     method: 'DELETE',
-//     url: config.apiUrl + '/blogs',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
+const updatePostIndex = function (data) {
+  console.log(data)
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/blogs/' + data.blog.id,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+      blog: {
+        title: data.blog.title,
+        date: data.blog.date,
+        post: data.blog.post
+      }
+    }
+  })
+}
+
+const deletePostIndex = function (blogId) {
+  console.log(blogId)
+  return $.ajax({
+    method: 'DELETE',
+    url: config.apiUrl + '/blogs/' + blogId.blog.id,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+      blog: {
+        _id: blogId.blog.id
+      }
+    }
+  })
+}
 
 module.exports = {
   createPostIndex,
-  getPostIndex
-  // updatePostIndex,
-  // deletePostIndex
+  getPostIndex,
+  updatePostIndex,
+  deletePostIndex
 }
