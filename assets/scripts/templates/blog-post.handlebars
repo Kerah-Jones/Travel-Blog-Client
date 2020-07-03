@@ -1,11 +1,9 @@
 {{#each blogs as |blog|}}
   {{log blog}}
   <section data-id="{{blog.id}}">
-    <h6>Title:</h6>
-    <h2>
-      {{blog.title}}
-    </h2>
-    <h6>Post:</h6>
+    <h2>{{blog.title}}</h2>
+    <h4>Date:{{blog.date}}</h4>
+    <h6>Blog ID:{{blog._id}}</h6>
     <p>
       {{#if blog.post}}
         {{blog.post}}
@@ -13,6 +11,8 @@
         No content.
       {{/if}}
     </p>
+    <button>Like</button>
+    <hr>
   </section>
 
 {{/each}}

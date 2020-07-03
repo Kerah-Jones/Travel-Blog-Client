@@ -5,3 +5,114 @@
   height: 200px;
   width: 500px;
 }
+
+.content {
+  color: white;
+  text-align: center;
+}
+
+#header {
+  background: url('https://i.imgur.com/CHWpQqP.jpg');
+  background-size: cover;
+  color: #f76262;
+  text-align: center;
+  padding: 200px 0;
+    }
+  h1 {
+      font-size: 70px;
+  }
+
+h3{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+h2 {
+    text-align: center;
+}
+
+form {
+  text-align: center;
+}
+
+.log-in {
+  margin: 0 400px;
+  border-radius: 35%;
+  background-color: #f76262;
+}
+button{
+  margin: 10px 0;
+}
+
+button:hover{
+  background-color: #65c0ba;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+.blog-content {
+  max-width: 500px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #f76262;
+}
+
+body{
+  background-color: #29a19c;
+}
+
+hr{
+  border-top: dotted;
+  border-right: none;
+  border-bottom: none;
+  border-left:none;
+  width:15%;
+  border-width: 8px;
+  border-color: #65c0ba;
+}
+
+.blog-buttons{
+  background-color: #f76262;
+  color: white;
+}
+.blog-buttons:hover{
+  background-color: #ffa07a;
+}
+
+.big-button{
+width: 200px;
+height:100px;
+background-color: #63cb91;
+border-radius: 30%;
+font-size: 30px;
+color: white;
+}
+
+.big-button:hover{
+  background:linear-gradient(to bottom, #d9f2e4 5%, #599bb3 100%);
+	background-color: #d9f2e4;
+  color: white;
+}
+.sign-out-button{
+  width: 100px;
+  height:50px;
+  background-color: #63cb91;
+  border-radius: 30%;
+  font-size: 20px;
+  color: white;
+  }
+.sign-out-button:hover{
+    background:linear-gradient(to bottom, #d9f2e4 5%, #599bb3 100%);
+  	background-color: #d9f2e4;
+    color: white;
+}
+
+@media (max-width: 700px) {
+  #log-in {
+    margin: 0 50px;
+    border-radius: 30%;
+    background-color: #f76262;
+  }
+}

@@ -1,4 +1,4 @@
-const store = require('./../store')
+
 const showBlogsTemplate = require('../templates/blog-post.handlebars')
 
 const createPostSuccess = function (responseCreatePost) {
@@ -19,47 +19,43 @@ const getPostSuccess = function (responseGetPost) {
   $('#message6').text('Here Are Your Posts!')
   $('form').trigger('reset')
   $('#message6').css('color', 'green')
-  console.log(responseGetPost.blogs)
   const showBlogsHtml = showBlogsTemplate({ blogs: responseGetPost.blogs })
   $('.content').html(showBlogsHtml)
+  $('#message5').hide('Post Successfully Created')
+  $('#message7').hide('Post Successfully Updated!')
+  $('#message8').text('Deleted Post!')
 }
 
-const getPostFailure = function (responseCreatePost) {
+const getPostFailure = function (responseGetPost) {
   $('#message6').text('Failed to Get Post')
   $('form').trigger('reset')
   $('#message6').css('color', 'red')
 }
 
-const updatePostSuccess = function (responseCreatePost) {
+const updatePostSuccess = function (responseUpdatePost) {
   // reset when sign in sucessful
   $('#message7').text('Post Successfully Updated!')
   $('form').trigger('reset')
   $('#message7').css('color', 'green')
 }
 
-const updatePostFailure = function (responseCreatePost) {
+const updatePostFailure = function (responseUpdatePost) {
   $('#message7').text('Failed Update Post')
   $('form').trigger('reset')
   $('#message7').css('color', 'red')
 }
 
-const deletePostSuccess = function (responseCreatePost) {
+const deletePostSuccess = function (responseDeletePost) {
   // reset when sign in sucessful
   $('#message8').text('Deleted Post!')
   $('form').trigger('reset')
   $('#message8').css('color', 'green')
 }
 
-const deletePostFailure = function (responseCreatePost) {
+const deletePostFailure = function (responseDeletePost) {
   $('#message8').text('Failed to Delete Post')
   $('form').trigger('reset')
   $('#message8').css('color', 'red')
-}
-const accessBlogSuccess = function (responseAccessBlog) {
-  $('#create-post').show()
-  $('#update-post').show()
-  $('#delete-post').show()
-  $('#get-post').show()
 }
 
 module.exports = {
@@ -70,6 +66,5 @@ module.exports = {
   updatePostSuccess,
   updatePostFailure,
   deletePostSuccess,
-  deletePostFailure,
-  accessBlogSuccess
+  deletePostFailure
 }

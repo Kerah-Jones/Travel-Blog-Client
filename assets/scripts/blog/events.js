@@ -62,6 +62,7 @@ const onAccessBlog = function (event) {
   $('#update-post').show()
   $('#delete-post').show()
   $('#get-posts').show()
+  $('#access-blog').hide()
 }
 
 module.exports = {
