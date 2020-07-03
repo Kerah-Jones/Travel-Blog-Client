@@ -4,7 +4,6 @@ const ui = require('./ui')
 
 const onCreatePost = function (event) {
   event.preventDefault()
-  console.log('create post ran')
 
   const form = event.target
   const data = getFormFields(form)
@@ -17,7 +16,6 @@ const onCreatePost = function (event) {
 
 const onGetPost = function (event) {
   event.preventDefault()
-  console.log('get post ran')
 
   const form = event.target
   const data = getFormFields(form)
@@ -30,7 +28,6 @@ const onGetPost = function (event) {
 
 const onUpdatePost = function (event) {
   event.preventDefault()
-  console.log('update post ran')
 
   const form = event.target
   const data = getFormFields(form)
@@ -42,7 +39,6 @@ const onUpdatePost = function (event) {
 }
 const onDeletePost = function (event) {
   event.preventDefault()
-  console.log('delete post ran')
 
   const form = event.target
   const data = getFormFields(form)

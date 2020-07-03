@@ -27,8 +27,10 @@ const signInSuccess = function (responseSignIn) {
   $('#sign-out').show()
   $('#change-password').show()
   $('#message2').css('color', 'green')
+  $('#message2').css('background-color', 'white')
   $('#access-blog').show()
   $('.content').show()
+  $('#welcome').text('Welcome Back')
   store.user = responseSignIn.user
   console.log(responseSignIn)
 }
@@ -37,6 +39,7 @@ const signInFailure = function (responseSignIn) {
   $('#message2').text('Sign In Failure')
   $('form').trigger('reset')
   $('#message2').css('color', 'red')
+  $('#message2').css('background-color', 'white')
 }
 
 // send message when password is changed
@@ -46,6 +49,7 @@ const changePasswordSuccess = function (responseChangePassword) {
   $('#message3').removeClass()
   $('#message3').addClass('success')
   $('#message3').css('color', 'green')
+  $('#message3').css('background-color', 'white')
 }
 
 // send message when password fails to update
@@ -55,6 +59,7 @@ const changePasswordFailure = function (responseChangePassword) {
   $('#message3').removeClass()
   $('#message3').addClass('failure')
   $('#message3').css('color', 'red')
+  $('#message3').css('background-color', 'white')
 }
 
 const signOutSuccess = function (responseSignOut) {
