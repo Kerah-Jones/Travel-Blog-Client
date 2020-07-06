@@ -24,5 +24,4 @@ $(() => {
   $('#get-posts').hide()
   $('#change-password').hide()
   $('#access-blog').hide()
-
 })
