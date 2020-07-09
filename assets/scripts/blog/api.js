@@ -20,6 +20,22 @@ const createPostIndex = function (data) {
     }
   })
 }
+const reviewPostIndex = function (data) {
+  console.log(data)
+  return $.ajax({
+    method: 'POST',
+    url: config.apiUrl + '/reviews',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+      review: {
+        title: data.review.title,
+        content: data.review.content
+      }
+    }
+  })
+}
 
 const getPostIndex = function (data) {
   console.log(data)
@@ -70,5 +86,6 @@ module.exports = {
   createPostIndex,
   getPostIndex,
   updatePostIndex,
-  deletePostIndex
+  deletePostIndex,
+  reviewPostIndex
 }

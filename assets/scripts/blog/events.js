@@ -61,10 +61,22 @@ const onAccessBlog = function (event) {
   $('#access-blog').hide()
 }
 
+const onReviewPost = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const data = getFormFields(form)
+  api.reviewPostIndex(data)
+
+    .then(ui.reviewPostSuccess)
+    .catch(ui.reviewPostFailure)
+}
+
 module.exports = {
   onCreatePost,
   onGetPost,
   onUpdatePost,
   onDeletePost,
-  onAccessBlog
+  onAccessBlog,
+  onReviewPost
 }
