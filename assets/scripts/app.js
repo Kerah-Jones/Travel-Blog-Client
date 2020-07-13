@@ -3,7 +3,7 @@
 // use require with a reference to bundle the file and use it in this file
 const authEvents = require('./auth/events.js')
 const blogEvents = require('./blog/events.js')
-const handleBars = require('./templates/blog-post.handlebars')
+// const handleBars = require('./templates/blog-post.handlebars')
 
 // use require without a reference to ensure a file is bundled
 // require('./example')
@@ -18,7 +18,8 @@ $(() => {
   $('#update-post').on('submit', blogEvents.onUpdatePost)
   $('#delete-post').on('submit', blogEvents.onDeletePost)
   $('#access-blog').on('submit', blogEvents.onAccessBlog)
-  $('#review-post').on('submit', handleBars.onReviewPost)
+  $('.content').on('submit', '.review-post', blogEvents.onReviewPost)
+  //    function () { console.log('we submitted the `.review-post` inside of the `.review-post`') })
   $('#sign-out').hide()
   $('#create-post').hide()
   $('#update-post').hide()

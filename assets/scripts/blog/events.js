@@ -66,7 +66,8 @@ const onReviewPost = function (event) {
 
   const form = event.target
   const data = getFormFields(form)
-  api.reviewPostIndex(data)
+  const blogId = $(event.target).data('id')
+  api.reviewPostIndex(data, blogId)
 
     .then(ui.reviewPostSuccess)
     .catch(ui.reviewPostFailure)

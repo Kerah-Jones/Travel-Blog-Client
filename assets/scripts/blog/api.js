@@ -20,11 +20,12 @@ const createPostIndex = function (data) {
     }
   })
 }
-const reviewPostIndex = function (data) {
+
+const reviewPostIndex = function (data, blogId) {
   console.log(data)
   return $.ajax({
     method: 'POST',
-    url: config.apiUrl + '/reviews',
+    url: config.apiUrl + '/reviews/' + blogId,
     headers: {
       Authorization: 'Token token=' + store.user.token
     },

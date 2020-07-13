@@ -74,15 +74,15 @@ const deletePostFailure = function (responseDeletePost) {
 
 const reviewPostSuccess = function (responseDReviewPost) {
   // reset when sign in sucessful
-  $('#message10').text('Review Posted!')
+  $('.message10').text('Review Posted!')
   $('form').trigger('reset')
-  $('#message8').css('color', 'green')
+  $('.message8').css('color', 'green')
 }
 
 const reviewPostFailure = function (responseDeletePost) {
-  $('#message10').text('Failed to Review')
+  $('.message10').text('Failed to Review')
   $('form').trigger('reset')
-  $('#message8').css('color', 'red')
+  $('.message8').css('color', 'red')
 }
 
 module.exports = {

@@ -1,6 +1,6 @@
 {{#each blogs as |blog|}}
   {{log blog}}
-  <section "data-id="{{blog.id}}">
+  <section data-id="{{blog.id}}">
     <h2>{{blog.title}}</h2>
     <h6>Date:{{blog.date}}</h4>
     <h6>Blog ID:{{blog._id}}</h6>
@@ -11,11 +11,12 @@
         No content.
       {{/if}}
     </p>
-    <h5>Review Title:{{review.title}}</h5>
-    <h6>Review Content:{{review.content}}</h6>
-
-    <form id="review-post">
-      <p id="message10"></p>
+    {{#each blog.reviews as |review|}}
+      <h5>Review Title:{{review.title}}</h5>
+      <h6>Review Content:{{review.content}}</h6>
+    {{/each}}
+    <form class="review-post" data-id="{{blog._id}}">
+      <p class="message10"></p>
       <input type="text" name="review[title]" placeholder= "Ttile of Review" required ><br>
       <input type="text" name="review[content]" placeholder= "Review" required ><br>
       <button type="submit">Post Review</button>
