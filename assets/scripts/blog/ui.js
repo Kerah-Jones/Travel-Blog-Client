@@ -76,7 +76,8 @@ const reviewPostSuccess = function (responseDReviewPost) {
   // reset when sign in sucessful
   $('.message10').text('Review Posted!')
   $('form').trigger('reset')
-  $('.message8').css('color', 'green')
+  $('.message10').css('color', 'green')
+  $('#message8').css('background-color', 'white')
 }
 
 const reviewPostFailure = function (responseDeletePost) {

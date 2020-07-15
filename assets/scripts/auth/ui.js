@@ -9,12 +9,14 @@ const signUpSuccess = function (responseSignUp) {
   $('form').trigger('reset')
   $('#message').css('color', 'green')
   $('#message').show('Sign Up Successful')
+  $('#message').css('background-color', 'white')
 }
 // message sign up unsucessful when requirements arent met
 const signUpFailure = function (responseSignUp) {
   $('#message').text('Sign Up Failed')
   $('form').trigger('reset')
   $('#message').css('color', 'red')
+  $('#message').css('background-color', 'white')
 }
 
 // send message of sign in Successful
@@ -30,7 +32,8 @@ const signInSuccess = function (responseSignIn) {
   $('#message2').css('background-color', 'white')
   $('#access-blog').show()
   $('.content').show()
-  $('#welcome').text('Welcome Back')
+  $('#sign-in').hide()
+  $('#sign-up').hide()
   store.user = responseSignIn.user
   console.log(responseSignIn)
 }

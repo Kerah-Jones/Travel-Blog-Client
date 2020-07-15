@@ -53,12 +53,31 @@ const onAccessBlog = function (event) {
   event.preventDefault()
   $('#sign-in').hide()
   $('#sign-up').hide()
-  $('#change-password').hide()
   $('#create-post').show()
   $('#update-post').show()
   $('#delete-post').show()
   $('#get-posts').show()
   $('#access-blog').hide()
+}
+const onShowSignIn = function (event) {
+  event.preventDefault()
+  $('#have-account-message').hide()
+  $('#sign-in').show()
+  $('#sign-up').hide()
+  $('#show-sign-in').hide()
+  $('#create-account-message').show()
+  $('#create-account-message').text('Need to Create an Account!')
+  $('#show-sign-up').show()
+}
+const onShowSignUp = function (event) {
+  event.preventDefault()
+  $('#create-account-message').hide()
+  $('#sign-up').show()
+  $('#sign-in').hide()
+  $('#create-account-message').hide()
+  $('#show-sign-up').hide()
+  $('#show-sign-in').show()
+  $('#have-account-message').show()
 }
 
 const onReviewPost = function (event) {
@@ -79,5 +98,7 @@ module.exports = {
   onUpdatePost,
   onDeletePost,
   onAccessBlog,
-  onReviewPost
+  onReviewPost,
+  onShowSignIn,
+  onShowSignUp
 }

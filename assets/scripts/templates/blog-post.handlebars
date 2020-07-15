@@ -11,9 +11,11 @@
         No content.
       {{/if}}
     </p>
+    <h4>Reviews</h4>
     {{#each blog.reviews as |review|}}
-      <h5>Review Title:{{review.title}}</h5>
+      <h6>Review Title:{{review.title}}</h6>
       <h6>Review Content:{{review.content}}</h6>
+        <hr>
     {{/each}}
     <form class="review-post" data-id="{{blog._id}}">
       <p class="message10"></p>

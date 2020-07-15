@@ -10,6 +10,9 @@
   color: white;
   text-align: center;
 }
+.log-in {
+  background-color: rgba(0, 0, 0, .5);
+}
 
 #header {
   background: url('https://i.imgur.com/CHWpQqP.jpg');
@@ -29,17 +32,13 @@ h3{
 }
 h2 {
     text-align: center;
+    color: white;
 }
 
 form {
   text-align: center;
 }
 
-.log-in {
-  margin: 0 400px;
-  border-radius: 35%;
-  background-color: #f76262;
-}
 button{
   margin: 10px 0;
 }
@@ -95,7 +94,7 @@ color: white;
 	background-color: #d9f2e4;
   color: white;
 }
-.sign-out-button{
+.auth-button {
   width: 100px;
   height:50px;
   background-color: #63cb91;
@@ -103,10 +102,19 @@ color: white;
   font-size: 20px;
   color: white;
   }
-.sign-out-button:hover{
+.auth-button:hover {
     background:linear-gradient(to bottom, #d9f2e4 5%, #599bb3 100%);
   	background-color: #d9f2e4;
     color: white;
+}
+#have-account-message {
+  color: white;
+  font-size: 20px;
+}
+
+#create-account-message {
+  color: white;
+  font-size: 20px;
 }
 
 @media (max-width: 700px) {
