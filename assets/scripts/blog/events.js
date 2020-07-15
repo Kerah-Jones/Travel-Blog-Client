@@ -58,6 +58,7 @@ const onAccessBlog = function (event) {
   $('#delete-post').show()
   $('#get-posts').show()
   $('#access-blog').hide()
+  $('#message3').hide()
 }
 const onShowSignIn = function (event) {
   event.preventDefault()

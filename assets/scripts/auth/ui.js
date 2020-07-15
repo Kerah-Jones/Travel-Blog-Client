@@ -10,6 +10,13 @@ const signUpSuccess = function (responseSignUp) {
   $('#message').css('color', 'green')
   $('#message').show('Sign Up Successful')
   $('#message').css('background-color', 'white')
+  $('#have-account-message').hide()
+  $('#sign-in').show()
+  $('#sign-up').hide()
+  $('#show-sign-in').hide()
+  $('#welcome-message').css('background-color', 'white')
+  $('#welcome-message').css('color', 'green')
+  $('#welcome-message').text('Welcome to Sundial Travel Blog! Please Sign In To Begin Blogging!')
 }
 // message sign up unsucessful when requirements arent met
 const signUpFailure = function (responseSignUp) {
@@ -34,6 +41,8 @@ const signInSuccess = function (responseSignIn) {
   $('.content').show()
   $('#sign-in').hide()
   $('#sign-up').hide()
+  $('#create-account-message').hide()
+  $('#show-sign-up').hide()
   store.user = responseSignIn.user
   console.log(responseSignIn)
 }
@@ -72,7 +81,9 @@ const signOutSuccess = function (responseSignOut) {
   $('#message4').css('color', 'green')
   $('form').trigger('reset')
   $('#sign-up').show()
-  $('#sign-in').show()
+  $('#sign-in').hide()
+  $('#have-account-message').show()
+  $('#show-sign-in').show()
   $('#change-password').hide()
   $('#sign-out').hide()
   $('#message').hide('Sign Up Successful')
