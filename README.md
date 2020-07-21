@@ -11,7 +11,7 @@ I enjoyed building my front-end application (hint: the css). I knew the first th
 Of Course there are some extra features I would like to add to the front-end to make the user experience that much better (hint: a delete button for each blog, and a edit button that renders the form as is and user is able to edit straight from the post without having to put blogid, title, and post all over again.)
 
 
-This is the link to my live site https://kerah-jones.github.io/travel-blog-client.
+This is the link to my live site https://kerah-jones.github.io/Travel-Blog-Client/.
 
 Technologies used: 
 JavaScript:
